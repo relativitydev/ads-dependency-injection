@@ -1,6 +1,6 @@
 ﻿namespace SampleApplication.Service
 {
-    internal class MyServiceModule : IMyServiceModule
-    {
-    }
+	internal class MyServiceModule : IMyServiceModule
+	{
+	}
 }

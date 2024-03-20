@@ -2,8 +2,8 @@
 
 namespace SampleApplication.Agent
 {
-    public interface ITestableWorker
-    {
-        Task<bool> ExecuteAsync();
-    }
+	public interface ITestableWorker
+	{
+		Task<bool> ExecuteAsync();
+	}
 }

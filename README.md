@@ -2,7 +2,7 @@
 
 This sample ADS application demonstrates how to do dependency injection with the different ADS platform extensibility points.
 
-Note: Dependency Injection for Event Handlers is the same as Agents and Custom Pages, so the examples are omitted here.
+Note: Dependency Injection for Event Handlers is the same as Agents, so the examples are omitted here.
 
 ## Dependency Injection
 Dependency Injection is a specific implementation of Dependency Inversion, one of the five S.O.L.I.D. object-oriented principles.
@@ -18,9 +18,15 @@ Relativity's Kepler framework supports Dependency Injection with Castle Windsor.
 
 See `SampleApplication.Service.MyService` for a sample implementation.
 
-### Dependency Injection in other extensibility points
+### Dependency Injection in Custom Pages
 
-Non-Kepler extensibility points don't have built-in support for Dependency Injection, but it is still possible. Two variations of a technique for implementing Dependency Injection are shown in `SampleApplication.Agent.MyAgent` and `SampleApplication.CustomPage.Controllers.HomeController`. The technique leverages the [Lazy\<T\> class](https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1?view=net-8.0) to delay DI Container resolution.
+Because the Custom Page sample is an ASP.NET MVC project, Castle Windsor Dependency Injection can be wired into the MVC application itself. This can be used at the unit testing level, to inject mocked classes. This can also be used at the test harness level.
+
+See `SampleApplication.CustomPage.Controllers.HomeController.cs` and the `SampleApplication.CustomPage.IoC` folder for more information.
+
+### Dependency Injection in Agent and EventHandler extensibility points
+
+Agent and EventHAndler extensibility points don't have built-in support for Dependency Injection, but it is still possible. Two variations of a technique for implementing Dependency Injection are shown in `SampleApplication.Agent.MyAgent`. The technique leverages the [Lazy\<T\> class](https://learn.microsoft.com/en-us/dotnet/api/system.lazy-1?view=net-8.0) to delay DI Container resolution.
 
 ## Building and Running
 

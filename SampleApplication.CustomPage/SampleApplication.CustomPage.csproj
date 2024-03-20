@@ -160,11 +160,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ITestableController.cs" />
-    <Compile Include="Controllers\MyTestableController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IoC\Container.cs" />
+    <Compile Include="IoC\ControllersInstaller.cs" />
+    <Compile Include="IoC\WindsorControllerFactory.cs" />
+    <Compile Include="LocalHarness\LocalAPILog.cs" />
+    <Compile Include="LocalHarness\LocalAuthenticationMgr.cs" />
+    <Compile Include="LocalHarness\LocalCPHelper.cs" />
+    <Compile Include="LocalHarness\LocalUserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
